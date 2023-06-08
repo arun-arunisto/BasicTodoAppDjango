@@ -1,0 +1,64 @@
+.heading {
+    text-align: center;
+    border: solid black 1px;
+}
+
+.heading h2 {
+    color: blue;
+}
+
+.tabledata {
+    margin-top: 10px;
+    border: solid red 1px;
+    padding: 30px;
+}
+
+.tabledata h2 {
+    text-align: center;
+}
+.tabledata table {
+    margin: 0 auto 0 auto;
+}
+
+.tabledata table, th, td {
+    border: solid black 1px;
+    width: 400px
+}
+
+.tabledata table td {
+    text-align: center;
+    padding: 10px;
+}
+
+.tabledata table td a {
+    text-decoration: none;
+    border: solid black 1px;
+    padding: 5px;
+    color: red;
+    background: blue;
+}
+
+.tabledata table td a:hover {
+    color: blue;
+    background: red;
+    cursor: pointer;
+}
+
+.formdata {
+    margin-top: 10px;
+    border: solid blue 1px;
+    padding: 20px;
+    text-align: center;
+}
+
+.formdata .field {
+    margin-top: 10px;
+}
+
+input[type=text] {
+    width: 300px;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}

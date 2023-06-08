@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<div class="heading">
+    <h2>Todo App using Django</h2>
+</div>
+
+<div class="tabledata">
+    {% if todo %}
+    <table>
+        <tr>
+            <th>Todo</th>
+            <th>Action</th>
+        </tr>
+        {% for item in todo %}
+        <tr>
+            <td>{{item.content}}</td>
+            <td><a href="/delete/{{item.id}}/" type="button">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h2>No List Available</h2>
+    {% endif %}
+</div>
+
+<div class="formdata">
+    <form action="/add/" method="post">
+        <div class="field">
+            <input type="text" name="todocontent" placeholder="type here...">
+        </div>
+        {% csrf_token %}
+        <div class="field">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+</body>
+</html>
